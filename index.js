@@ -18,5 +18,8 @@ function deleteFromEmployeeByKey(employee, key) {
     return Object.assign({}, delete employee.key);
 }
 
-
+function destructivelyDeleteFromEmployeeByKey(employee, key, value) {
+    employee[key] = value;
+    return employee;
+}
 
